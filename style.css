@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+#lista1{
+    display: inline;
+    padding-left:3px;
+    padding-right:3px
+}
+.lista1{
+    display: inline;
+    padding-left:3px;
+    padding-right:3px
+}
