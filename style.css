@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* NAVEGADOR */
 
 .prenav {
@@ -28,3 +29,65 @@
   background-color: #e6e6e9;
 }
 /* FIN NAVEGADOR */
+=======
+body{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+#lista1{
+    display: inline;
+    padding-left:3px;
+    padding-right:3px
+}
+.lista1{
+    display: inline;
+    padding-left:3px;
+    padding-right:3px
+}
+
+.contenedor-imagen{
+    position: relative;
+}
+.efecto-imagen:hover{
+    transform: scale(1.5);
+    transition: all .5s;
+}
+.efecto-imagen::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all .5s
+}
+
+.efecto-imagen:hover::before{
+    background-color: rgb(0,0,0,.8);
+    transition: all .5s;
+}
+.texto-imagen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.efecto{
+    position: relative;
+    top: 100%;
+}
+.efecto-imagen:hover .efecto{
+    top: 0;
+    animation-delay: .3s;
+    transition: all .3s;
+}
+>>>>>>> 139fb3ff1ed52ed14f0e25c5491b86d15e6ebb52
