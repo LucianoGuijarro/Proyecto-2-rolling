@@ -1,93 +1,177 @@
-<<<<<<< HEAD
+:root {
+  --color-nav: #d2d7df;
+  --color-primario: #353535;
+  --color-botones: #bdbbb0;
+  --text-size: 2rem;
+  --font-nav: "Roboto Condensed", sans-serif;
+}
+
 /* NAVEGADOR */
-
-.prenav {
-  width: auto;
-  height: 25px;
-  text-align: center;
-  background-color: #9999a1;
-}
-
-.menu {
-  list-style: none;
-  background-color: #9999a1;
+.header {
+  background-color: #efefef;
+  height: 80px;
+  position: fixed;
   width: 100%;
+  top: 0;
+  left: 0;
 }
 
-.menu li a {
+.nav {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0 auto;
+  background-color: var(--color-nav);
+}
+.nav-link {
+  color: var(--color-primario);
   text-decoration: none;
-  color: #000000;
-  padding: 5px;
-  display: block
 }
-.menu li {
-  display: inline-block;
-  text-align: center;
-  padding: 10px;
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 0px 80px;
+  line-height: 90px;
+  color: var(--color-primario);
 }
-.menu li a:hover {
-  background-color: #e6e6e9;
+.nav-menu {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+.nav-menu-item {
+  font-size: 18px;
+  margin: 5px 5px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content;
+}
+.nav-menu-link {
+  padding: 0;
+  border-radius: 3px;
+}
+.nav-menu-link:hover,
+.nav-menu-link_active {
+  background-color: var(--color-botones);
+  transition: 0.5s;
+}
+.nav-toggle {
+  color: var(--color-primario);
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px;
+  line-height: 60px;
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+  .header {
+    height: 60px;
+  }
+
+  .logo {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 20px;
+    line-height: 60px;
+  }
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    background-color: var(--color-botones);
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    padding: 20px 0;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    left: 100%;
+    transition: left 0.3s;
+  }
+  .nav-menu-item {
+    line-height: 70px;
+  }
+
+  .nav-menu-link:hover,
+  .nav-menu-link_active {
+    background: none;
+    font-size: var(--text-size);
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .nav-menu_visible {
+    left: 0;
+  }
+  .carousel {
+    display: none;
+  }
 }
 /* FIN NAVEGADOR */
-=======
-body{
-    margin: 0;
-    padding: 0;
+
+body {
+  margin: 0;
+  padding: 0;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
-#lista1{
-    display: inline;
-    padding-left:3px;
-    padding-right:3px
+#lista1 {
+  display: inline;
+  padding-left: 3px;
+  padding-right: 3px;
 }
-.lista1{
-    display: inline;
-    padding-left:3px;
-    padding-right:3px
+.lista1 {
+  display: inline;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
-.contenedor-imagen{
-    position: relative;
+.contenedor-imagen {
+  position: relative;
 }
-.efecto-imagen:hover{
-    transform: scale(1.5);
-    transition: all .5s;
+.efecto-imagen:hover {
+  transform: scale(1.5);
+  transition: all 0.5s;
 }
-.efecto-imagen::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: all .5s
+.efecto-imagen::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
 }
 
-.efecto-imagen:hover::before{
-    background-color: rgb(0,0,0,.8);
-    transition: all .5s;
+.efecto-imagen:hover::before {
+  background-color: rgb(0, 0, 0, 0.8);
+  transition: all 0.5s;
 }
-.texto-imagen{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.texto-imagen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.efecto{
-    position: relative;
-    top: 100%;
+.efecto {
+  position: relative;
+  top: 100%;
 }
-.efecto-imagen:hover .efecto{
-    top: 0;
-    animation-delay: .3s;
-    transition: all .3s;
+.efecto-imagen:hover .efecto {
+  top: 0;
+  animation-delay: 0.3s;
+  transition: all 0.3s;
 }
->>>>>>> 139fb3ff1ed52ed14f0e25c5491b86d15e6ebb52
